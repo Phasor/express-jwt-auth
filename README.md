@@ -2,7 +2,7 @@
 
 Uses passport-jwt strategy.
 
-It uses the private key here to sign the jwt. THe private key would be help privately on the Express server. Here it is exposed. Generate a new one locally and use that:
+It uses the private key here to sign the jwt. The private key would be held privately on the Express server. Here it is exposed. Generate a new one locally and use that when using in prpoduction:
 
 `node generateKeypair.js`
 

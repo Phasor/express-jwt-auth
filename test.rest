@@ -1,0 +1,22 @@
+POST http://localhost:3000/users/register
+Content-Type: application/json
+
+{
+    "username":"zach",
+    "password":"123"
+}
+
+###
+
+POST http://localhost:3000/users/login
+Content-Type: application/json
+
+{
+    "username":"zach",
+    "password":"123"
+}
+
+###
+GET http://localhost:3000/users/protected
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MzFjZDQxMTM0ZjEyZjY0ODVmYzk5MWIiLCJpYXQiOjE2NjI4MzQ3Njg5MzQsImV4cCI6MTY2MjgzNDg1NTMzNH0.ErGNEhGZIHz5dXGhy-RR4Jk4L4YnD-HIh5jaYnIxIiuyeRae68Dv1FuAEzH58Kk3AVcYxJK1zLGi7avZiiJ7zM7zJhE8n6BPvSwc4Hn8PcEvdIJnUl54HM1R6jPftR2K9ruyPgau-v0O0_rIf29CcXzOFq5cBvFh5fayLeJDZ-qwarbKRuMWaUXjfsUSIhXDwUzrAFw7gF0qtFDDTSVzks1IgTjj2F8YHNRGsW4LuVFU7t5VA95J2aOf_w0EeOPal7-nT92469kP-8gJqs5L1p8oa_EfjEZaa9ycNQmlUZMW8NMitzlgKwHUqzaXBWQi07S6wZ3SwD4gXlUKExNHIEdlIfWRK3YVJG8l-UhT8nSHHnCDyGPi33X7tf8dSo6c0DQ7q4Ecdh4APixRkQwRY0cbvgyYarKCAI69wdI6pHWq1CTBKoJWU_TsB8rDx_VTs5dRTF8HH7iAGQp-mFIBbbLGQz_Yzd5YtcpOqA_HGFs1kpkaDdsZhdj7lcIccQuK61BoF4Y__szBC9bxe4sljPYY__Hp2dmz04vysaNT0_rUyvgfZjhKuEYuN1E3_DAsiNEkmHWXLKYZE6KKS7GSdO-zSoXIEBF7wpYlw8eU12n1kqcs9UpbXb_OiCQZxVfIKyYt2s81Y7PMR4AZD-K18TYOQOYfqP4BNeLWFWF3OFw

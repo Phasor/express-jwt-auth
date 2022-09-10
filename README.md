@@ -1,25 +1,27 @@
-## Disclaimer
+## Basic JWT Authentication Using Passport.js
 
-The patterns shown in this repository are meant for educational purposes.  While this is sufficiently secure to use for personal projects, there are considerations not mentioned in this tutorial series that should be explored for an enterprise-grade implementation.
+Uses passport-jwt strategy.
 
-In other words, this will get you 95% of the way there, but do you own research to ensure your implementation is secure!
+It uses the private key here to sign the jwt. THe private key would be help privately on the Express server. Here it is exposed. Generate a new one locally and use that:
 
-## How to use this Repo
+`node generateKeypair.js`
 
-This repo has two branches:
+Create a .env with the following variables:
+* DB_STRING=[your db connection string]
+* NODE_ENV=
+* DB_STRING_PROD=
 
-* master
-* final
+### Run the Express App
+`nodemon app.js`
 
-The `master` branch has a starter template for creating what is in the `final` branch.
+### Send a Test GET to Protected Route
+Use requests setup in `test.rest`.
 
-There is an Angular app included, but is entirely optional.  Since JWT authentication is commonly seen in SPAs (single page applications) like Angular, I decided it was important to at least have a basic implementation.
+First login by sending POST to /users/login
 
-## How to run the app
+Send a GET to /users/protected ensuring you send the JWT token gained from /users/login as the Authorization header, ensuring you include the word Bearer and the space. You should be able to access the protected route.
 
-When you go to each branch, the `README.md` will show you how to start the app.
-
-The `master` branch is incomplete and you can follow the written or video tutorials to complete:
+#### Links:
 
 * Written - https://www.zachgollwitzer.com/posts/2020/passport-js/
 * Video - https://www.youtube.com/playlist?list=PLYQSCk-qyTW2ewJ05f_GKHtTIzjynDgjK
